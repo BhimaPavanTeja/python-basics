@@ -14,7 +14,9 @@ graph["jonny"] = []
 # Define the mango seller condition
 def person_is_seller(name):
     # Example logic: person's name ends with 'm'
-    return name[-1] == 'm'
+    # return name[-1] == 'm'
+    # i declared thom as mango seller
+    return name == 'thom'
 
 # BFS search function
 def search(name):
