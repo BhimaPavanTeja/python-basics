@@ -26,9 +26,9 @@ def nearestMeetingCell(edges, node1, node2):
     return meeting_cell
 
 # Input reading
-n = 4
-edges = [1, 2, 3, -1]
-node1, node2 = 0, 1
+n = 23
+edges = [4, 4, 1, 4, 13, 8, 8, 8, 0, 8, 14, 9, 15, 11, -1, 10, 15, 22, 22, 22, 22, 22, 21]
+node1, node2 = 9, 2
 
 # Function call
 print(nearestMeetingCell(edges, node1, node2))
