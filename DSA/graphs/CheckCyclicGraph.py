@@ -11,8 +11,14 @@ class Solution:
                     return True
                     
         return False
-                    
-    def isCycle(self, V, edges):
+
+    def isCycle(self, V, edges_list):
+        # Convert edge list to adjacency list
+        edges = [[] for _ in range(V)]
+        for u, v in edges_list:
+            edges[u].append(v)
+            edges[v].append(u)
+            
         ans = False
         vis = [False]*V
         
@@ -25,12 +31,6 @@ class Solution:
 edges_list = [[0, 1], [0, 2], [1, 2], [2, 3]]
 V = 4
 
-# Convert edge list to adjacency list
-edges = [[] for _ in range(V)]
-for u, v in edges_list:
-    edges[u].append(v)
-    edges[v].append(u)
-
 sol = Solution()
-print("It is a Cyclic Graph" if sol.isCycle(V, edges) else "No Cycle")
+print("It is a Cyclic Graph" if sol.isCycle(V, edges_list) else "No Cycle")
 
